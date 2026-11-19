@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "description": "NextStep — AI-powered Career Assistant",
+  "main": "backend/src/server.js",
   "scripts": {
-    "install:all": "cd backend && npm install && cd ../frontend && npm install",
-    "dev:backend": "cd backend && npm run dev",
-    "dev:frontend": "cd frontend && npm run dev",
-    "start:backend": "cd backend && npm start"
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "start:backend": "npm start --prefix backend",
+    "build": "npm ci --prefix backend && npm ci --prefix frontend --include=dev && npm run build --prefix frontend",
+    "start": "node backend/src/server.js"
   }
 }
