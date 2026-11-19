@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+frontend/dist/
+
+# Logs and debug
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Uploaded user files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Vite
+frontend/node_modules/.vite/
